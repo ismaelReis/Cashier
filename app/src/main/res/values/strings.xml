@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Chamar Caixa Livre</string>
+    <string name="send_address">send_address</string>
+    <string name="num_caixa">num_caixa</string>
+</resources>

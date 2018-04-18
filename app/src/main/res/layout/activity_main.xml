@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mainlayout_bottom"
+        android:layout_marginLeft="@dimen/mainlayout_margin"
+        android:layout_marginRight="@dimen/mainlayout_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Desconectado"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bt_discover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_main"
+            android:layout_weight="1"
+            android:text="Buscar" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_stopdiscover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parar busca"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/bt_sendpicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="send picture"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/bt_bgowner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="be group owner"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/bt_stopconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desconectar"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mainlayout_bottom"
+        android:layout_marginLeft="@dimen/mainlayout_margin"
+        android:layout_marginRight="@dimen/mainlayout_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Número do caixa:"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtNumCaixa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:paddingLeft="@dimen/mainlayout_margin"
+            android:paddingRight="@dimen/mainlayout_margin"
+            android:text="0"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtNumCaixa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:ems="3"
+            android:inputType="number"
+            android:text="0"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btChangeCaixa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Alterar" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mainlayout_margin"
+        android:layout_marginRight="@dimen/mainlayout_margin"
+        android:layout_marginBottom="@dimen/mainlayout_bottom"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Preferencial" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Atendimento"
+            android:textColor="@android:color/black" />
+
+        <Spinner
+            android:id="@+id/spAtendimentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+        <ImageView
+            android:id="@+id/imgHelpAtd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            app:srcCompat="@mipmap/ic_help_atd" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_senddata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recyclerview"
+            android:layout_margin="@dimen/mainlayout_margin"
+            android:layout_marginTop="28dp"
+            android:layout_weight="1"
+            android:background="@drawable/circle_button"
+            android:text="Chamar"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
+
+
+</LinearLayout>
